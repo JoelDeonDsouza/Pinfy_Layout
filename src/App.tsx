@@ -1,3 +1,10 @@
+/**
+ * @author: Joel Deon Dsouza
+ * @description: Example application using the Masonry component to display a grid of images with responsive columns, gaps, and animations. Demonstrates item click and load events.
+ * @version: 1.0.0
+ * @date: 2025-05-29
+ */
+
 import { Masonry } from "./components";
 import type { MasonryItemData } from "./types";
 

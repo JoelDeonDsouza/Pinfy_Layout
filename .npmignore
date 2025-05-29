@@ -1,0 +1,11 @@
+src/
+public/
+*.config.*
+tsconfig*.json
+.eslintrc*
+jest*
+test/
+tests/
+__tests__/
+*.test.*
+*.spec.*

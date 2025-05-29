@@ -19,21 +19,10 @@ const mockGetScreenWidth = responsiveUtils.getScreenWidth as jest.Mock;
 const mockGetBreakpoint = responsiveUtils.getBreakpoint as jest.Mock;
 
 // Mock types //
-interface MasonryBreakpoints {
-  xs: number;
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-}
 
 describe("useResponsive", () => {
-  const originalAddEventListener = window.addEventListener;
-  const originalRemoveEventListener = window.removeEventListener;
-
   let addEventListenerSpy: jest.SpyInstance;
   let removeEventListenerSpy: jest.SpyInstance;
-
   beforeEach(() => {
     jest.clearAllMocks();
 
@@ -167,11 +156,9 @@ describe("useResponsive", () => {
   });
 
   it("should update width when resize event is triggered", () => {
-    let resizeHandler: () => void;
-
-    addEventListenerSpy.mockImplementation((event, handler) => {
+    addEventListenerSpy.mockImplementation((event, _handler) => {
       if (event === "resize") {
-        resizeHandler = handler as () => void;
+        // handler is captured here //
       }
     });
 

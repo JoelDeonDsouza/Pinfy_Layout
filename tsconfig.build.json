@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
+    "verbatimModuleSyntax": false,
+    "allowImportingTsExtensions": false,
+    "jsx": "react-jsx",
+    "emitDeclarationOnly": true,
+    "isolatedModules": false,
+    "preserveModulesRoot": "./src",
+    "module": "ESNext",
+    "moduleResolution": "bundler"
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "src/**/*.test.*", 
+    "src/**/*.spec.*",
+    "src/main.tsx",
+    "src/App.tsx",
+    "node_modules",
+    "dist"
+  ]
+}
