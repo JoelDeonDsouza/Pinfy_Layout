@@ -10,7 +10,7 @@
     "jsx": "react-jsx",
     "emitDeclarationOnly": true,
     "isolatedModules": false,
-    "preserveModulesRoot": "./src",
+    "rootDir": "./src",
     "module": "ESNext",
     "moduleResolution": "bundler"
   },

@@ -19,7 +19,6 @@ const mockGetScreenWidth = responsiveUtils.getScreenWidth as jest.Mock;
 const mockGetBreakpoint = responsiveUtils.getBreakpoint as jest.Mock;
 
 // Mock types //
-
 describe("useResponsive", () => {
   let addEventListenerSpy: jest.SpyInstance;
   let removeEventListenerSpy: jest.SpyInstance;
