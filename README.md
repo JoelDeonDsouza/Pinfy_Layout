@@ -35,7 +35,7 @@ https://www.npmjs.com/package/pinfy-layouts
 
 ```
 import React from 'react';
-import { Masonry } from 'react-masonry-layout';
+import { Masonry } from 'pinfy-layouts';
 
 const items = [
   { id: 1, src: 'https://picsum.photos/800/1000?random=1', alt: 'Beautiful landscape' },
@@ -89,7 +89,7 @@ interface MasonryItemData {
 ### Usage Examples
 
 ```
-import { Masonry } from 'react-masonry-layout';
+import { Masonry } from 'pinfy-layouts';
 
 const ImageGallery = () => {
   const images = [
