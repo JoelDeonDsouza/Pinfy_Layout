@@ -1,3 +1,127 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .masonry-container {
+    @apply relative w-full;
+  }
+
+  .masonry-item {
+    @apply absolute transition-all duration-300;
+  }
+
+  .masonry-item-loading {
+    @apply opacity-0;
+  }
+
+  .masonry-item-loaded {
+    @apply opacity-100;
+  }
+
+  .masonry-image {
+    @apply w-full h-auto object-cover;
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
+
+@layer utilities {
+  .masonry-gap-1 {
+    gap: 0.25rem;
+  }
+  .masonry-gap-2 {
+    gap: 0.5rem;
+  }
+  .masonry-gap-3 {
+    gap: 0.75rem;
+  }
+  .masonry-gap-4 {
+    gap: 1rem;
+  }
+  .masonry-gap-5 {
+    gap: 1.25rem;
+  }
+  .masonry-gap-6 {
+    gap: 1.5rem;
+  }
+}
+
+.masonry-container {
+  transition: height 0.3s ease;
+}
+
+.masonry-item {
+  position: absolute;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.masonry-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.masonry-item-custom {
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.masonry-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.masonry-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 0.5rem;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.masonry-item-loading {
+  opacity: 0.7;
+}
+
+.masonry-item-loaded {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .masonry-item {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
