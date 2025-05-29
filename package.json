@@ -27,7 +27,15 @@
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "^4.1.8",
+    "postcss": "^8.0.0",
+    "autoprefixer": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "autoprefixer": {
+      "optional": true
+    }
   },
   "dependencies": {
     "clsx": "^2.1.1",
