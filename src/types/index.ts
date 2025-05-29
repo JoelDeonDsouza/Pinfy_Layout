@@ -86,3 +86,4 @@ export interface ImageLoadResult {
   dimensions: ImageDimensions;
   aspectRatio: number;
 }
+
