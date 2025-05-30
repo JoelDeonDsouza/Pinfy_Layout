@@ -7,11 +7,13 @@ A highly performant, responsive masonry layout component for React and React Nat
 **Client:** React, Tailwind css, Typescript
 
 ## Install
+
 ```
 npm i pinfy-layouts
 ```
 
-## Host 
+## Host
+
 ```
 https://www.npmjs.com/package/pinfy-layouts
 ```
@@ -47,7 +49,7 @@ function App() {
     <div className="container mx-auto p-4">
       <Masonry
         items={items}
-        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4, "2xl": 5 }}
         gap={16}
         onItemClick={(item, index) => console.log('Clicked:', item)}
       />
@@ -127,7 +129,7 @@ const CustomMasonry = () => {
   return (
     <Masonry
       items={posts}
-      columns={{ md: 2, lg: 3 }}
+      columns={{ sm: 1, md: 2, lg: 3, xl: 4, "2xl": 5 }}
       renderItem={(item) => (
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h3 className="font-bold text-lg">{item.title}</h3>
@@ -179,7 +181,7 @@ const InteractiveGallery = () => {
   return (
     <Masonry
       items={items}
-      columns={{ md: 2, lg: 3 }}
+      columns={{ sm: 1, md: 2, lg: 3, xl: 4, "2xl": 5 }}
       onItemClick={handleItemClick}
       onItemLoad={handleItemLoad}
       transitionDuration={400}
